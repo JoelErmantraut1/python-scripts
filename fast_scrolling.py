@@ -1,11 +1,14 @@
 # -*- coding:utf-8 -*-
 
 """
+Author: Joel Ermantraut
+Last Modification: 22/01/2020
+Python Version: 3.9.1
+Last Working Test: 22/01/2020
 
 When double alt is pressed, activates for some seconds
 the fast scroll function, where the scroll works N times
 faster than usual.
-
 """
 
 from pynput import keyboard, mouse
@@ -63,7 +66,7 @@ def main():
     listener = mouse.Listener(
         on_scroll=on_scroll)
     listener.start()
-            
+
     with keyboard.Listener(
             on_press=on_press) as listener:
         listener.join()

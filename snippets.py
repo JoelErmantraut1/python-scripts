@@ -1,10 +1,15 @@
 #-*- coding:utf-8 -*-
 
 """
-Regista cada uno de las pulsacion del teclado.
-Cuando se presiona el disparador, busca la ultima
-combinacion de teclas para escribir una combinacion
-relacionada.
+Author: Joel Ermantraut
+Last Modification: 22/01/2020
+Python Version: 3.9.1
+Last Working Test: 10/02/2019
+
+Classic snippets utility. Registers each keystroke
+and a special trigger, that when is press, search
+in the last keys a registered combination, and
+rewrite the associated string if exists.
 """
 
 from pynput import mouse
@@ -92,7 +97,7 @@ key_controller = keyboard.Controller()
 def add_logger(key_logger, key):
     if str(key) == "<65027>":
         return key_logger
-    # Caso especial
+    # Alt key not working well in this module
 
     for i in range(key_logger_len - 1):
         key_logger[i] = key_logger[i + 1]

@@ -1,6 +1,11 @@
 #-*- coding:utf-8 -*-
 
 """
+Author: Joel Ermantraut
+Last Modification: 22/01/2020
+Python Version: 3.9.1
+Last Working Test: 10/02/2019
+
 Controls volume with mouse wheel and Super key.
 
 Super + Up = Increases volume
@@ -59,7 +64,7 @@ def set_volume_controller():
     with mouse.Listener(
         on_click=on_click,
         on_scroll=on_scroll) as listener:
-        
+
         listener.join()
 
 if __name__ == "__main__":
