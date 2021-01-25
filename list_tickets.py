@@ -7,7 +7,7 @@ Python Version: 3.9.1
 Last Working Test: 23/01/2020
 
 This program calculates the sum of a list of tickets, in PDF.
-It is writted in English because the customer wanted it.
+It was writted in Spanish because the customer wanted it.
 """
 import os
 import re
